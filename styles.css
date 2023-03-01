@@ -19,7 +19,6 @@
 }
 
 .text {
-/*         border: 1px solid red; */
   text-align: center;
   position: relative;
   font-family: "Helvetica", sans-serif;
@@ -63,11 +62,3 @@
     background-position: left;
   }
 }
-
-/* @media (max-width: 650px) {
-  .text {
-    background-size: calc(1111% - 222);
-    font-size: 5vw;
-    
-  }
-} */
