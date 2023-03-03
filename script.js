@@ -22,6 +22,14 @@ function overlayMethod() {
   });
 }
 
+// функция обновляет текст по клику
+function updateOnClick() {
+  
+  const target = document.querySelector(".text");
+  target.addEventListener('click', updateText);
+
+}
+
 // функция возращает использованные слова в исходный массив, если тот пуст
 function ifWordsEmpty(arr, arr2) {
   
