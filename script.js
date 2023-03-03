@@ -1,4 +1,4 @@
-let words = ['slay', 'you go gurl', 'psichiatria']; // массив исходных слов
+let words = ['slay', 'yas', 'purr']; // массив исходных слов
 let usedWords = []; // массив использованных слов
 let lastWord // последнее использованное слово
 
