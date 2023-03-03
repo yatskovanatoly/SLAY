@@ -1,4 +1,4 @@
-let words = ['slay', 'yas', 'purr']; // массив исходных слов
+let words = ['slay', 'yass', 'purr', 'you go gurl', 'psichiatria']; // массив исходных слов
 let usedWords = []; // массив использованных слов
 let lastWord // последнее использованное слово
 
@@ -20,14 +20,6 @@ function overlayMethod() {
       });
     });
   });
-}
-
-// функция обновляет текст по клику
-function updateOnClick() {
-  
-  const target = document.querySelector(".text");
-  target.addEventListener('click', updateText);
-
 }
 
 // функция возращает использованные слова в исходный массив, если тот пуст
@@ -103,5 +95,5 @@ function updateText() {
 
 overlayMethod();
 updateText();
-let timerId = setInterval(() => updateText(), 10000); // повторяет обновление текста через заданный интервал
+//let timerId = setInterval(() => updateText(), 60000); // повторяет обновление текста через заданный интервал
 // setTimeout(() => { clearInterval(timerId); }, 5000); // останавливает обновление через заданное время
