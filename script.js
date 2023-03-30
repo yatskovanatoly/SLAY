@@ -1,4 +1,12 @@
-let words = ['slay', 'yass', 'purr', 'you go gurl', 'psichiatria']; // массив исходных слов
+fetch('./words.json')
+  .then(response => response.json())
+  .then(data => {
+    words = data
+    console.log(words)
+    overlayMethod();
+    updateText()
+  });
+
 let usedWords = []; // массив использованных слов
 let lastWord // последнее использованное слово
 
@@ -42,16 +50,16 @@ function ifWordsNotEmpty(arr, arr2, text, randomIndex) {
     text.textContent = arr[randomIndex]; // обновляем текст на странице
 
     if (arr2 === 0) {
-      console.log('WORDS: ' + arr); // печатаем в консоль массив слов если использованных ещё нет
+      console.log('WORDS: ' + arr.join(', ')); // печатаем в консоль массив слов если использованных ещё нет
     }
     
     arr2.push(arr[randomIndex]); // копируем использованное слово в свой массив
     arr.splice(randomIndex, 1); // удаляем использованное слово из массива слов
-    console.log('USED: ' + arr2); // логим использованные слова
+    console.log('USED: ' + arr2.join(', ')); // логим использованные слова
 
     // печатаем в консоль оставшиеся слова, если они есть
     if (arr.length > 0) {
-      console.log('WORDS: ' + arr);
+      console.log('WORDS: ' + arr.join(', '));
     }
 
     lastWord = arr2[arr2.length - 1]; // декларируем последнее слово
@@ -93,7 +101,5 @@ function updateText() {
 
 }
 
-overlayMethod();
-updateText();
 //let timerId = setInterval(() => updateText(), 60000); // повторяет обновление текста через заданный интервал
 // setTimeout(() => { clearInterval(timerId); }, 5000); // останавливает обновление через заданное время
