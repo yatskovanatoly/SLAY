@@ -3,9 +3,9 @@ fetch('./words.json')
   .then(data => {
     words = data
     console.log(words)
-    overlayMethod();
     updateText()
   });
+  
 
 let usedWords = []; // массив использованных слов
 let lastWord // последнее использованное слово
@@ -100,6 +100,6 @@ function updateText() {
   ifWordsNotEmpty(words, usedWords, text, randomIndex);
 
 }
-
+overlayMethod();
 //let timerId = setInterval(() => updateText(), 60000); // повторяет обновление текста через заданный интервал
 // setTimeout(() => { clearInterval(timerId); }, 5000); // останавливает обновление через заданное время
